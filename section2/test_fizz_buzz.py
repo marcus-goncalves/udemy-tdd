@@ -35,3 +35,7 @@ def test_return2With2PassedIn() -> None:
 
 def test_returnFizzWith3PassedIn() -> None:
     check_fizz_buzz(3, "Fizz")
+
+
+def test_returnBuzzWith5PassedIn() -> None:
+    check_fizz_buzz(5, "Buzz")
