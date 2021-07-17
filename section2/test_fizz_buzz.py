@@ -9,3 +9,7 @@ USE CASES:
 - Get Buzz when a multiple of 5 is passed (10)
 - Gut FizzBuzz when a multiple of 3 and 5 is passed (15)
 """
+
+
+def test_canCallFizzBuzz():
+    fizzBuzz(1)
