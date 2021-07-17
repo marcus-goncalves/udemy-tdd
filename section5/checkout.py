@@ -9,4 +9,5 @@ Provide a class to:
 
 
 class Checkout:
-    pass
+    def addItemPrice(self, item, price) -> None:
+        pass
