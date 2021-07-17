@@ -34,3 +34,7 @@ def test_CalculateTotalWithMultipleItems(checkout) -> None:
     checkout.addItem("a")
     checkout.addItem("b")
     assert checkout.calculateTotal() == 3
+
+
+def test_ApplyDiscount(checkout) -> None:
+    checkout.addDiscount("a", 3, 2)
