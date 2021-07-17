@@ -22,10 +22,6 @@ def test_AddItemPrice(checkout) -> None:
     checkout.addItemPrice("a", 1)
 
 
-def test_AddItem(checkout) -> None:
-    checkout.addItem("a")
-
-
 def test_CalculateTotal(checkout) -> None:
     checkout.addItemPrice("a", 1)
     checkout.addItem("a")
