@@ -36,7 +36,6 @@ def test_ApplyDiscount(checkout) -> None:
     checkout.addDiscount("a", 3, 2)
 
 
-@pytest.mark.skip
 def test_AddDiscountRule(checkout) -> None:
     checkout.addDiscount("a", 3, 2)
     checkout.addItem("a")
