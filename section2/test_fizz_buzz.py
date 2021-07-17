@@ -9,17 +9,7 @@ USE CASES:
 - Get "Buzz" when a multiple of 5 is passed (10)
 - Gut "FizzBuzz" when a multiple of 3 and 5 is passed (15)
 """
-
-
-def fizz_buzz(number: int) -> str:
-    if (number % 3) == 0:
-        return "Fizz"
-    elif (number % 5) == 0:
-        return "Buzz"
-
-    return str(number)
-
-# Support Function
+# Support Functions
 
 
 def check_fizz_buzz(val: int, expected: str) -> None:
@@ -27,6 +17,21 @@ def check_fizz_buzz(val: int, expected: str) -> None:
     assert result == expected
 
 
+def is_multiple(val: int, mod: int) -> bool:
+    return val % mod == 0
+
+
+# FUNCTION TO BE TESTED
+def fizz_buzz(number: int) -> str:
+    if is_multiple(number, 3):
+        return "Fizz"
+    elif is_multiple(number, 5):
+        return "Buzz"
+
+    return str(number)
+
+
+# UNIT TEST FUNCTIONS
 def test_return1With1PassedIn() -> None:
     check_fizz_buzz(1, "1")
 
