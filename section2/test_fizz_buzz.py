@@ -12,6 +12,9 @@ USE CASES:
 
 
 def fizz_buzz(number: int) -> str:
+    if number == 3:
+        return "Fizz"
+
     return str(number)
 
 # Support Function
@@ -28,3 +31,7 @@ def test_return1With1PassedIn() -> None:
 
 def test_return2With2PassedIn() -> None:
     check_fizz_buzz(2, "2")
+
+
+def test_returnFizzWith3PassedIn() -> None:
+    check_fizz_buzz(3, "Fizz")
