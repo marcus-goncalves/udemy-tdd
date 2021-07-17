@@ -15,6 +15,10 @@ def test_ReturnsCorrectString(monkeypatch) -> None:
 
     mock_open = MagicMock(return_value=mock_file)
     monkeypatch.setattr("builtins.open", mock_open)
+
+    mock_exists = MagicMock(return_value=True)
+    monkeypatch.setattr('os.path.exists', mock_exists)
+
     result = read_from_file("blah")
 
     mock_open.assert_called_once_with("blah", "r")
