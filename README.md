@@ -110,3 +110,16 @@ To run the tests use: pytest -v "name of the file"
 * __call_count__: An integer representing the number of times that mock was called
 * __call_args__: arguments that mock was last called with
 * __call_args_list__: A list of arguments that were used for each call
+
+## Section 7 - TDD Best Practices
+* Doing the next simplest test case allow you to gradually increase the complexity of your code
+* If you do complex test cases too quickly you will find yourself stuck writing a lot of functionality all at once
+* Beyond slowing you down, this can also lead to bad design decisions
+* Using descriptive names makes test clear and readable
+* Unit test are the best documentation for how your code works
+* Test suites should name the class or function under test and the test names should be describe the functionality being tested
+* Mock out any slow collaborators with test doubles that are fast
+* Use code coverage tools
+* You should have a goal of 100% code coverage in functions with businnes logic in them (not simple getters and setters)
+* Use a static code analysis tool like Pylint
+* Focus on test the behavior rather than the implementation
