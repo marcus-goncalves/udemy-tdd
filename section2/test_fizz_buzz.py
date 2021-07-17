@@ -12,7 +12,7 @@ USE CASES:
 
 
 def fizz_buzz(number: int):
-    return
+    return str(number)
 
 
 def test_canCallFizzBuzz():
