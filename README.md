@@ -65,3 +65,17 @@ To run the tests use: pytest -v "name of the file"
 
 ### Setup and Teardown functions
 * It will execute code before and after test modules, test functions, test classes
+
+### Fixtures
+* Allow reuse of setup and teardown code accross tests
+* Usage as a decorator "@pytest.fixture"
+
+### Fixtures Scopes
+* __Function__: Run once for each test
+* __Class__: Run once for each class of tests
+* __Module__: Run once when the module goes in scope
+* __Session__: Run once pytest starts
+
+### Assert Statements
+* Asserting floats, use _approx_ from pytest
+* For test exceptions, use _with raises_
