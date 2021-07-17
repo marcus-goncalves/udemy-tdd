@@ -2,7 +2,7 @@
 Unit testing and TDD with python - Udemy Course
 ### Libs
 pip install pytest
-To run the tests use: pytest "name of the file"
+To run the tests use: pytest -v "name of the file"
 
 ## Section 2
 ### Why do we unit test?
@@ -45,3 +45,23 @@ To run the tests use: pytest "name of the file"
 * Unit tests validate test cases for individual functions
 * Unit tests should run fast
 * Unit test should build and run only in DEV environment
+
+## Section 4 Pytest Overview
+
+### What is it?
+* Unit Test Framework
+* Privder ability to create Tests, Test Modules and Fixtures
+* Uses built-in assert statement
+* Has cmd line params to help filter which tests are executed and in what order
+
+### Creating a Test
+* Functions that starts with "test_"
+* Similar test can be grouped together by including them in the same module or class
+
+### Test Discovery
+* Pytest will automatically discover tests when you execute it
+* Classes name should start with "Test" and no have an "init" method
+* Functions should start with "test_"
+
+### Setup and Teardown functions
+* It will execute code before and after test modules, test functions, test classes
