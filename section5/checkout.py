@@ -6,3 +6,7 @@ Provide a class to:
 - Total current cost of items in the checkout
 - Apply discounts on selected items when N are purchased
 """
+
+
+class Checkout:
+    pass

@@ -9,7 +9,8 @@ Use Cases for Testing
 - Can apply discount rules to total
 - Exception thrown when item added without price
 """
+from .checkout import Checkout
 
 
 def test_InstantiateCheckout() -> None:
-    checkout = Checkout()
+    co = Checkout()
