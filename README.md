@@ -1,2 +1,47 @@
 # udemy-tdd
 Unit testing and TDD with python - Udemy Course
+### Libs
+pip install pytest
+To run the tests use: pytest "name of the file"
+
+## Section 2
+### Why do we unit test?
+* Software bugs hurt the business
+* Software testing catches the bugs before they get to the field
+* Need several levels of safety tests
+
+### Levels of Testing
+* Uni Testing - Function Level
+* Component Testing - At the library and compiled binary level
+* System Testing - external interfaces of a system
+* Performance Testing - Verify timing and resources usages are acceptable
+
+### Unit Testing Specifics
+* Tests individual functions
+* A test should be weitten for each test case for a function
+* Groups of test can be combined into test suites for better organization
+* Executes in the dev environment
+* Execution of the tests should be automated
+
+### What is TDD?
+* A process where the dev takes personal responsability for the quality of their code
+* Unit tests are written _before_ the production code
+* Tests and production code are both written together, in small bits of functionality
+
+### Benefits of TDD
+* Gives you confidence to change code
+* Gives you immediate feedback
+* Documents what the code does
+* Drives good objet oriented design
+
+### TDD Workflow
+* __RED__ Phase: Write a failing unit test
+* __GREEN__ Phase: Write just enough code to make that test pass
+* __REFACTOR__ Phase: refactor unit test and the production code to make it clean
+* Repeat until the feature is complete
+
+### Summary
+* Unit tests are the first safety net for catching bugs
+* Unit tests validate test cases for individual functions
+* Unit tests should run fast
+* Unit test should build and run only in DEV environment
