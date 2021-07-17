@@ -11,5 +11,9 @@ USE CASES:
 """
 
 
+def fizz_buzz(number: int):
+    return
+
+
 def test_canCallFizzBuzz():
-    fizzBuzz(1)
+    fizz_buzz(1)
