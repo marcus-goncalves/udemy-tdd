@@ -11,10 +11,20 @@ USE CASES:
 """
 
 
-def fizz_buzz(number: int):
+def fizz_buzz(number: int) -> str:
     return str(number)
 
+# Support Function
 
-def test_return1With1PassedIn():
-    result = fizz_buzz(1)
-    assert result == "1"
+
+def check_fizz_buzz(val: int, expected: str) -> None:
+    result = fizz_buzz(val)
+    assert result == expected
+
+
+def test_return1With1PassedIn() -> None:
+    check_fizz_buzz(1, "1")
+
+
+def test_return2With2PassedIn() -> None:
+    check_fizz_buzz(2, "2")
