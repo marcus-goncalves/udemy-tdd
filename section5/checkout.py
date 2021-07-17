@@ -14,3 +14,6 @@ class Checkout:
 
     def addItem(self, item) -> None:
         pass
+
+    def calculateTotal(self) -> int:
+        return 1
