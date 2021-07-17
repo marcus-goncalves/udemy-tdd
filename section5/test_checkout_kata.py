@@ -10,8 +10,14 @@ Use Cases for Testing
 - Exception thrown when item added without price
 """
 from .checkout import Checkout
+from section5 import checkout
 
 
 def test_AddItemPrice() -> None:
     co = Checkout()
     co.addItemPrice("a", 1)
+
+
+def test_AddItem() -> None:
+    co = Checkout()
+    co.addItem("a")
