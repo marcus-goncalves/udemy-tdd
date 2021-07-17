@@ -9,13 +9,18 @@ from unittest.mock import MagicMock
 import pytest
 
 
-def test_ReturnsCorrectString(monkeypatch) -> None:
+@pytest.fixture()
+def mock_open(monkeypatch) -> MagicMock:
     mock_file = MagicMock()
     mock_file.readline = MagicMock(return_value='test line')
 
     mock_open = MagicMock(return_value=mock_file)
     monkeypatch.setattr("builtins.open", mock_open)
 
+    return mock_open
+
+
+def test_ReturnsCorrectString(mock_open, monkeypatch) -> None:
     mock_exists = MagicMock(return_value=True)
     monkeypatch.setattr('os.path.exists', mock_exists)
 
@@ -25,13 +30,7 @@ def test_ReturnsCorrectString(monkeypatch) -> None:
     assert result == "test line"
 
 
-def test_ExceptionDoesntExists(monkeypatch) -> None:
-    mock_file = MagicMock()
-    mock_file.readline = MagicMock(return_value='test line')
-
-    mock_open = MagicMock(return_value=mock_file)
-    monkeypatch.setattr("builtins.open", mock_open)
-
+def test_ExceptionDoesntExists(mock_open, monkeypatch) -> None:
     mock_exists = MagicMock(return_value=False)
     monkeypatch.setattr('os.path.exists', mock_exists)
     with pytest.raises(Exception):
