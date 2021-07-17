@@ -9,15 +9,18 @@ Use Cases for Testing
 - Can apply discount rules to total
 - Exception thrown when item added without price
 """
+import pytest
 from .checkout import Checkout
-from section5 import checkout
 
 
-def test_AddItemPrice() -> None:
-    co = Checkout()
-    co.addItemPrice("a", 1)
+@pytest.fixture()
+def checkout() -> Checkout:
+    return Checkout()
 
 
-def test_AddItem() -> None:
-    co = Checkout()
-    co.addItem("a")
+def test_AddItemPrice(checkout) -> None:
+    checkout.addItemPrice("a", 1)
+
+
+def test_AddItem(checkout) -> None:
+    checkout.addItem("a")
