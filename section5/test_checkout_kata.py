@@ -12,10 +12,6 @@ Use Cases for Testing
 from .checkout import Checkout
 
 
-def test_InstantiateCheckout() -> None:
-    co = Checkout()
-
-
 def test_AddItemPrice() -> None:
     co = Checkout()
     co.addItemPrice("a", 1)
