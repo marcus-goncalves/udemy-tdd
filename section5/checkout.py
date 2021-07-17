@@ -9,11 +9,15 @@ Provide a class to:
 
 
 class Checkout:
+    def __init__(self) -> None:
+        self.prices = {}
+        self.total = 0
+
     def addItemPrice(self, item, price) -> None:
-        pass
+        self.prices[item] = price
 
     def addItem(self, item) -> None:
-        pass
+        self.total += self.prices[item]
 
     def calculateTotal(self) -> int:
-        return 1
+        return self.total
