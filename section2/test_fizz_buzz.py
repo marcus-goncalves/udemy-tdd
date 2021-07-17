@@ -23,9 +23,13 @@ def is_multiple(val: int, mod: int) -> bool:
 
 # FUNCTION TO BE TESTED
 def fizz_buzz(number: int) -> str:
+    if is_multiple(number, 3) and is_multiple(number, 5):
+        return "FizzBuzz"
+
     if is_multiple(number, 3):
         return "Fizz"
-    elif is_multiple(number, 5):
+
+    if is_multiple(number, 5):
         return "Buzz"
 
     return str(number)
