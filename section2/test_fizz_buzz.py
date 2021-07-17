@@ -15,10 +15,6 @@ def fizz_buzz(number: int):
     return str(number)
 
 
-def test_canCallFizzBuzz():
-    fizz_buzz(1)
-
-
 def test_return1With1PassedIn():
     result = fizz_buzz(1)
     assert result == "1"
