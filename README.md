@@ -79,3 +79,34 @@ To run the tests use: pytest -v "name of the file"
 ### Assert Statements
 * Asserting floats, use _approx_ from pytest
 * For test exceptions, use _with raises_
+
+## Section 6 - Unit Test Isolation with Dummies, Fakes, Stubs, Spies and Mocks
+
+### What are Test Doubles
+* Objects that are used as replacements to the real prod system collaborators
+
+### Types of Doubles
+* __Dummy__: Like placeholders, do not have any type of test implementation
+* __Fake__: Simplified functional implementation of a particular interface
+* __Stubs__: Provide implementations with canned answers that are suitable for the test
+* __Spies__: Provide implementations that record values that were passed
+* __Mocks__: Pre-prorammed to expect specific calls and parameter, and can throw exception when necessary
+
+### Using unittest.Mock
+* Provides many initialization parameters to control the mock objects behavior
+* __spec__: specifies the interface to Mock
+* __side_effect__: specifies a function that should be called
+* __return_value__: specifies the return value when the Mock is called
+* Provides many built-in functions for verify how it was used
+* __assert_called__: Assert that mock was called
+* __assert_called_once__: Assert that mock was called once
+* __assert_called_with__: Assert that mock was called with the parameter
+* __assert_called_once_with__: Assert that mock was called once with the parameter
+* __assert_any_call__: Assert that mock was ever called with specified parameter
+* __assert_not_called__ Assert that mock was not called
+* Provides additional atributes for verification:
+* __assert_has_calls__: Assert that mock was called with a list of calls
+* __called__: A boolean indicator if the mock was ever called
+* __call_count__: An integer representing the number of times that mock was called
+* __call_args__: arguments that mock was last called with
+* __call_args_list__: A list of arguments that were used for each call
